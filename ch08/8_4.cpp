@@ -19,11 +19,11 @@ int main(void)
 
     set(beauy, testing);
     show(beauy);
-    show(beauy, 3);
+    show(beauy, 2);
     testing[0] = 'D';
     testing[1] = 'u';
     show(testing);
-    show(testing, 2);
+    show(testing, 3);
     show("Done!");
 
     return 0;
@@ -41,13 +41,31 @@ void set(stringy & beauy, char * str)
 
 void show(const stringy & beauy, int n)
 {
-    while(n-- > 0)
+    if (n == 0)
+    {
         cout << beauy.str << endl;
+    }
+    else
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << beauy.str << endl;
+        }
+    }
 }
 
 void show(const char * str, int n)
 {
-    while(n-- > 0)
+    if (n == 0)
+    {
         cout << str << endl;
+    }
+    else
+    {
+        for (int j = 0; j < n; j++)
+        {
+            cout << str << endl;
+        }
+    }
 }
 
